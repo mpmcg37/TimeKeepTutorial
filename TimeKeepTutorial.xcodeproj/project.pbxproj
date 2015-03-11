@@ -14,6 +14,7 @@
 		0D5DA9B41AB0406F001ABE31 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D5DA9B31AB0406F001ABE31 /* Images.xcassets */; };
 		0D5DA9B71AB0406F001ABE31 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5DA9B51AB0406F001ABE31 /* LaunchScreen.xib */; };
 		0D5DA9C31AB0406F001ABE31 /* TimeKeepTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5DA9C21AB0406F001ABE31 /* TimeKeepTutorialTests.swift */; };
+		0D5DA9CD1AB040B8001ABE31 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5DA9CC1AB040B8001ABE31 /* Employee.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		0D5DA9BC1AB0406F001ABE31 /* TimeKeepTutorialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeKeepTutorialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5DA9C11AB0406F001ABE31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D5DA9C21AB0406F001ABE31 /* TimeKeepTutorialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeKeepTutorialTests.swift; sourceTree = "<group>"; };
+		0D5DA9CC1AB040B8001ABE31 /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +81,9 @@
 		0D5DA9A61AB0406F001ABE31 /* TimeKeepTutorial */ = {
 			isa = PBXGroup;
 			children = (
-				0D5DA9A91AB0406F001ABE31 /* AppDelegate.swift */,
 				0D5DA9AE1AB0406F001ABE31 /* ViewController.swift */,
 				0D5DA9B01AB0406F001ABE31 /* Main.storyboard */,
-				0D5DA9B31AB0406F001ABE31 /* Images.xcassets */,
-				0D5DA9B51AB0406F001ABE31 /* LaunchScreen.xib */,
-				0D5DA9AB1AB0406F001ABE31 /* TimeKeepTutorial.xcdatamodeld */,
+				0D5DA9CC1AB040B8001ABE31 /* Employee.swift */,
 				0D5DA9A71AB0406F001ABE31 /* Supporting Files */,
 			);
 			path = TimeKeepTutorial;
@@ -93,6 +92,10 @@
 		0D5DA9A71AB0406F001ABE31 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0D5DA9A91AB0406F001ABE31 /* AppDelegate.swift */,
+				0D5DA9B31AB0406F001ABE31 /* Images.xcassets */,
+				0D5DA9B51AB0406F001ABE31 /* LaunchScreen.xib */,
+				0D5DA9AB1AB0406F001ABE31 /* TimeKeepTutorial.xcdatamodeld */,
 				0D5DA9A81AB0406F001ABE31 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D5DA9AF1AB0406F001ABE31 /* ViewController.swift in Sources */,
+				0D5DA9CD1AB040B8001ABE31 /* Employee.swift in Sources */,
 				0D5DA9AA1AB0406F001ABE31 /* AppDelegate.swift in Sources */,
 				0D5DA9AD1AB0406F001ABE31 /* TimeKeepTutorial.xcdatamodeld in Sources */,
 			);

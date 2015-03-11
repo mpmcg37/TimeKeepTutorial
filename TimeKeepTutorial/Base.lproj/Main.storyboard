@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TimeKeepTutorial" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +15,51 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name or PIN" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GCu-ZV-eFR">
+                                <rect key="frame" x="229" y="206" width="142" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Such and Such worked so many hours" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0E-C0-yRy">
+                                <rect key="frame" x="152" y="282" width="297" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxK-Yg-9fe">
+                                <rect key="frame" x="246" y="244" width="108" height="30"/>
+                                <state key="normal" title="CLOCK IN/OUT">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clockInOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I1p-z1-59J"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sSome more information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTK-ci-xQP">
+                                <rect key="frame" x="206" y="311" width="189" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WxK-Yg-9fe" firstAttribute="centerX" secondItem="GCu-ZV-eFR" secondAttribute="centerX" id="Bjt-Is-o3P"/>
+                            <constraint firstItem="GCu-ZV-eFR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="186" id="CBT-Zu-ztB"/>
+                            <constraint firstItem="WxK-Yg-9fe" firstAttribute="top" secondItem="GCu-ZV-eFR" secondAttribute="bottom" constant="8" symbolic="YES" id="Kf0-ML-sw0"/>
+                            <constraint firstItem="tTK-ci-xQP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iQo-YF-as1"/>
+                            <constraint firstItem="tTK-ci-xQP" firstAttribute="top" secondItem="m0E-C0-yRy" secondAttribute="bottom" constant="8" symbolic="YES" id="ke7-gQ-Uj7"/>
+                            <constraint firstItem="m0E-C0-yRy" firstAttribute="centerX" secondItem="tTK-ci-xQP" secondAttribute="centerX" id="lkW-lK-SN5"/>
+                            <constraint firstItem="WxK-Yg-9fe" firstAttribute="centerX" secondItem="m0E-C0-yRy" secondAttribute="centerX" id="sEZ-gw-vnD"/>
+                            <constraint firstItem="m0E-C0-yRy" firstAttribute="top" secondItem="WxK-Yg-9fe" secondAttribute="bottom" constant="8" symbolic="YES" id="x6N-pZ-5c0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hoursLabel" destination="m0E-C0-yRy" id="uyC-CQ-wCZ"/>
+                        <outlet property="infoLabel" destination="tTK-ci-xQP" id="4qj-hJ-cfJ"/>
+                        <outlet property="nameField" destination="GCu-ZV-eFR" id="8Hg-Mx-Aae"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
